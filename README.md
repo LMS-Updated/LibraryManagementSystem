@@ -1,2 +1,2 @@
 # LibraryManagementSystem
-A LMS with all the basic functionalities.
+An LMS with all the basic functionalities.
