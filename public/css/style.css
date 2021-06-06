@@ -5,14 +5,14 @@
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/***********Sign-In Page****************/
+/***********Index-Sign-In Page****************/
 
-.sign-in-container{
+.Index-sign-in-container{
     width:80vw;
     height:100vh;
     padding:200px 20px 20px 100px;
 } 
-.sign-in-block{
+.Index-sign-in-block{
 width:30%;
 height:45%;
 background-color:rgb(231, 205, 200);
@@ -61,3 +61,58 @@ font-size:20px;
 }
 
 /**********************Home Page********************************/
+
+.carousel-caption{
+    background-color:black;
+    /* border-radius:2rem; */
+    box-shadow: 4px 4px 8px lightgrey;
+    padding:1rem;
+}
+.home-carousel-heading{
+    font-size:4rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.home-statistics{
+width:100vw;
+height:80vh;
+/* background-color:rgb(231, 205, 200); */
+text-align:center;
+padding:10% 4%;
+}
+.home-statistics-main-heading{
+font-size:4rem;
+font-weight:bold;
+}
+.home-statistics-item{
+width:300px;
+height:200px;
+background-color:rgb(250, 93, 93);
+display:inline-block;
+margin:4% 5%;
+border-radius:5%;
+padding:2% 0% 0% 0%;
+color:white;
+box-shadow:2px 2px 2px grey;
+}
+
+.home-statistics-item-heading{
+padding:0% 0% 2% 0%;
+}
+
+/******************************************************Reviews*******************************************************************/
+
+ #reviews{  
+    text-align:center;
+    background-color:rgb(250, 93, 93);
+    color:#fff;
+    height:100vh;
+    padding:20%;
+}
+
+/**************************************************************Additional***********************************************************/
+#additional{
+    height:100vh;
+}
+
+ 
