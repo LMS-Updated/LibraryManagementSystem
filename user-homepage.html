@@ -21,8 +21,7 @@
     crossorigin="anonymous"></script>
 
   <!------------------------------------------External Stylesheet-------------------------------------------------------------------------------->
-  <link rel="stylesheet" href="public/css/home.css">
-
+  <link rel="stylesheet" href="public/css/style.css">
   <!------------------------------------------Font-awsome link for icons--------------------------------------------------------------------------->
   <script src="https://kit.fontawesome.com/60f0166554.js" crossorigin="anonymous"></script>
   <title>E-Library</title>
@@ -30,7 +29,7 @@
 
 <body>
 
-
+<!---------------------------------Navbar---------------------------->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <h1 class="logo">E-Library</h1>
@@ -40,45 +39,47 @@
       <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              <h5>
+                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </h5>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Books.html">Books</a>
+              <h5>
+                <a class="nav-link" href="Books.html">Books Issued</a>
+              </h5>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="users.html">Users</a>
+              <h5>
+                <a class="nav-link" href="about.html">Profile</a>
+              </h5>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Issue-Return</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
+              <h5>
+                <a class="nav-link" href="contact.html">Logout</a>
+              </h5>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-------------------------------------------------Homepage Front carousel---------------------------------------------------------------------->
+  <!-------------------------------------------------Student Homepage Front carousel---------------------------------------------------------------------->
   <div id="home-carousel" class="carousel slide" data-ride="false">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="Images/homepage-image1.jpg" class="d-block w-100" height="600" alt="image">
+        <img src="images/user-homepage-image1.jpg" class="d-block w-100" height="600" alt="image">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="home-carousel-heading"><em>There is no friend as loyal as Books.</em></h5>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="Images/starting-page-image.webp" class="d-block w-100" height="600" alt="image">
+        <img src="images/starting-page-image.webp" class="d-block w-100" height="600" alt="image">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="home-carousel-heading"><em>A room without boooks is like a body without a soul.</em></h5>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="Images/starting-page-image.webp" class="d-block w-100" height="600" alt="image">
+        <img src="images/starting-page-image.webp" class="d-block w-100" height="600" alt="image">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="home-carousel-heading"><em>A book is a gift you can open again ad again.</em></h5>
         </div>
@@ -92,24 +93,7 @@
     </a>
   </div>
 
-  <!-----------------------------------------------------------Statistics------------------------------------------------------------->
-  <div class="home-statistics">
-    <h1 class="home-statistics-main-heading">Our Statistics</h1>
-    <div class="home-statistics-item">
-      <h1 class="home-statistics-item-heading">Total Books</h1>
-      <h2>1000+</h2>
-    </div>
-    <div class="home-statistics-item">
-      <h1 class="home-statistics-item-heading">Total Users</h1>
-      <h2>500+</h2>
-    </div>
-    <div class="home-statistics-item">
-      <h1 class="home-statistics-item-heading">Books Issued</h1>
-      <h2>1500+</h2>
-    </div>
-  </div>
-
-
+  <!----------------------------------Footer------------------->
   <footer class="footer">
     <span>Copyrights @Team</span>
   </footer>

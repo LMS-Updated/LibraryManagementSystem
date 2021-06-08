@@ -17,39 +17,31 @@
 </head>
 
 <body>
-    <div class="container">
 <!---------------------------------------------Navbar------------------------------------------------------------------------------------------------>
         <nav class="navbar fixed-top navbar-light bg-light">
             <div class="container-fluid">
                 <h1 class="logo">E-Library</h1>
         </nav>
-<!----------------------------------------------Red and Black Circles for decorative purpose---------------------------------------------------------------------------->
-        <!-- <div class="red-circle circle"> </div> -->
-        <!-- <div class="black-circle circle"> </div> -->
 
 <!---------------------------------------------Sign in box -------------------------------------------------------------------------------------------->      
-        <div class="Index-sign-in-container">
+        <div class="admin-signin-container">
            
-            <img src="Images/signin-page-image2.png" id="sign-in-image2" alt="signin image" width="100%" height="100%">
-            <div class="signup-form-container">
-                <div class="signup-form">
-                    <h2 id="signup-form-heading">Welcome!</h2>
-                    <label for="">Full Name</label>
-                    <input type="text" placeholder="Enter your Full Name">
-                    <label for="">Email</label>
-                    <input type="text" placeholder="Enter your Email">
-                    <label for="">Password</label>
-                    <input type="text" placeholder="Enter your password">
-                    <label for="">Confirm Password</label>
-                    <input type="password" placeholder="Enter Your Password">
-                    <button class="btn btn-lg signup-form-btn">Submit</button>
-                </div>
-               
+            <img src="images/admin-login-page.jpg" alt="admin-page-image" width="100%" height="100%">
+            <div class="signin-signup-form-container admin-signin-form-container">
+                <form action="home.html" method="post" class="signin-signup-form">
+                    <h2 class="heading">Welcome Admin!</h2>
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="Enter your Email">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter Your Password">
+                    <a class="btn btn-lg admin-login-btn" href="admin-homepage.html"> Login</a>
+                </form>
             </div>
+
            
     </div>
 
-    </div>
+ 
 <!-----------------------------------------------Footer---------------------------------------------------------------------------------------------------->
     
     <footer class="footer">
