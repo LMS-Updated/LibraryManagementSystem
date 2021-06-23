@@ -23,25 +23,25 @@
             <div class="container-fluid">
                 <h1 class="logo">E-Library</h1>
         </nav>
-
-<!---------------------------------------------Sign in box -------------------------------------------------------------------------------------------->      
+<!---------------------------------------------user registration box -------------------------------------------------------------------------------------------->      
         <div class="page-container">
            
-            <img src="Images/user-signin-page-image2.png" alt="user-signin image" width="100%" height="100%">
-            <form action="home.html" method="post" class="signin-signup-form-container user-signin-form-container">
-                <div class="signin-signup-form user-signin-form">
-                    <h2 class="heading">Welcome Back User!</h2>
+            <img src="Images/user-signin-page-image2.png" alt="user-signup image" width="100%" height="100%">
+            <div class=" signin-signup-form-container user-signup-form-container">
+                <form action="register.php" method="post" class="signin-signup-form user-signup-form">
+                    <h2 class="heading">User Registration</h2>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullname" placeholder="Enter your Full Name">
                     <label for="email">Email</label>
-                    <input id="email" type="text" placeholder="Enter your Email">
-                    <label for="password">Password</label>
-                    <input id="password" type="password" placeholder="Enter Your Password">
-                    <a class="btn btn-lg user-signin-form-btn" href="user-homepage.html"> Login</a>
-                    <span class="user-signin-span"><a  href="user-signup.html"> New User? Sign Up</a></span>
-                    <span class="user-signin-span"><a  href="">Forgot Password?</a></span>
-                    <img src="Images/user-signin-page-image1.png" id="user-sign-in-image1" alt="signin image" width="200" height="100">
-                </div>
-            </form>
-
+                    <input type="text" id="email" name="email" placeholder="Enter your Email">
+                    <label for="mobile">Mobile No.</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Enter your Mobile No">
+                    <label for="password"> Password</label>
+                    <input type="password" id="password"  name="password" placeholder="Enter Your Password">
+                    <button class="btn btn-lg signup-form-btn" name="signup" type="submit">SignUp</a>
+                </form>
+               
+            </div>
            
     </div>
 
@@ -51,6 +51,10 @@
     <footer class="footer">
         <span>Copyrights @ Team</span>
     </footer>
+
+    
+
+   
 </body>
 
 </html>

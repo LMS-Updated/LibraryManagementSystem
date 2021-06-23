@@ -1,3 +1,7 @@
+<?php
+ session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,8 +67,9 @@
     </div>
   </nav>
 
+
   <!-------------------------------------------------Student Homepage Front carousel---------------------------------------------------------------------->
-  <div id="home-carousel" class="carousel slide" data-ride="false">
+  <!-- <div id="home-carousel" class="carousel slide" data-ride="false">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="Images/user-homepage-image1.jpg" class="d-block w-100" height="600" alt="image">
@@ -91,12 +96,17 @@
     <a class="carousel-control-next" href="#home-carousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon"></span>
     </a>
-  </div>
+  </div> -->
 
+
+
+<h1>Welcome<?php $_SESSION['username'] ?></h1>
   <!----------------------------------Footer------------------->
   <footer class="footer">
     <span>Copyrights @Team</span>
   </footer>
+
+
 </body>
 
 </html>

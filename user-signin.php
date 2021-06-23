@@ -1,3 +1,8 @@
+<?php 
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +22,7 @@
 </head>
 
 <body>
+    <div class="container">
 <!---------------------------------------------Navbar------------------------------------------------------------------------------------------------>
         <nav class="navbar fixed-top navbar-light bg-light">
             <div class="container-fluid">
@@ -24,29 +30,32 @@
         </nav>
 
 <!---------------------------------------------Sign in box -------------------------------------------------------------------------------------------->      
-        <div class="admin-signin-container">
+        <div class="page-container">
            
-            <img src="Images/admin-login-page.jpg" alt="admin-page-image" width="100%" height="100%">
-            <div class="signin-signup-form-container admin-signin-form-container">
-                <form action="home.html" method="post" class="signin-signup-form">
-                    <h2 class="heading">Welcome Admin!</h2>
+            <img src="Images/user-signin-page-image2.png" alt="user-signin image" width="100%" height="100%">
+            <form action="validation.php" method="post" class="signin-signup-form-container user-signin-form-container">
+                <div class="signin-signup-form user-signin-form">
+                    <h2 class="heading">Welcome Back User!</h2>
                     <label for="email">Email</label>
-                    <input id="email" type="text" placeholder="Enter your Email">
+                    <input id="email" type="text" name="email" placeholder="Enter your Email">
                     <label for="password">Password</label>
-                    <input id="password" type="password" placeholder="Enter Your Password">
-                    <a class="btn btn-lg admin-login-btn" href="admin-homepage.html"> Login</a>
-                </form>
-            </div>
-
-           
+                    <input id="password" type="password" name="password" placeholder="Enter Your Password">
+                    <button class="btn btn-lg user-signin-form-btn" name="login" type="submit"> Login</button>
+                    <span class="user-signin-span"><a  href="user-signup.php"> New User? Sign Up</a></span>
+                    <span class="user-signin-span"><a  href="">Forgot Password?</a></span>
+                    <img src="Images/user-signin-page-image1.png" id="user-sign-in-image1" alt="signin image" width="200" height="100">
+                </div>
+            </form>  
     </div>
 
- 
+    </div>
 <!-----------------------------------------------Footer---------------------------------------------------------------------------------------------------->
     
     <footer class="footer">
         <span>Copyrights @ Team</span>
     </footer>
+
+   
 </body>
 
 </html>

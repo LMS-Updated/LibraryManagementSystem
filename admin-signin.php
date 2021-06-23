@@ -17,38 +17,35 @@
 </head>
 
 <body>
-    <div class="container">
 <!---------------------------------------------Navbar------------------------------------------------------------------------------------------------>
         <nav class="navbar fixed-top navbar-light bg-light">
             <div class="container-fluid">
                 <h1 class="logo">E-Library</h1>
         </nav>
-<!----------------------------------------------Red and Black Circles for decorative purpose---------------------------------------------------------------------------->
-        <div class="red-circle circle"> </div>
-        <div class="black-circle circle"> </div>
 
 <!---------------------------------------------Sign in box -------------------------------------------------------------------------------------------->      
-        <div class="page-container">
-            <img src="Images/starting-page-image.webp" alt="starting image" width="900" height="500">
-            <div class="index-main-block">
-                <h1>Embrace The Books!</h1>
-                <div class="quote-block">
-                    <p><em>Knowledge is free at library, Just bring your own container.</em></p>
-                </div>
-                <a class="btn btn-lg index-page-btn" href="user-signin.html"> User Login</a>
-                <a class="btn btn-lg index-page-btn" href="admin-signin.html"> Admin Login</a>
+        <div class="admin-signin-container">
+           
+            <img src="Images/admin-login-page.jpg" alt="admin-page-image" width="100%" height="100%">
+            <div class="signin-signup-form-container admin-signin-form-container">
+                <form action="admin-homepage.php" method="post" class="signin-signup-form">
+                    <h2 class="heading">Welcome Admin!</h2>
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="Enter your Email">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter Your Password">
+                    <button class="btn btn-lg admin-login-btn" type="submit"> Login</button>
+                </form>
             </div>
-        </div>
+
+           
     </div>
 
-<!-------------------------------------------------About Us------------------------------------------------------------------------------>
-
-<!--------------------------------------------------Contact Us------------------------------------------------------------------------------------->
-
+ 
 <!-----------------------------------------------Footer---------------------------------------------------------------------------------------------------->
     
     <footer class="footer">
-        <span>Copyrights @Team</span>
+        <span>Copyrights @ Team</span>
     </footer>
 </body>
 

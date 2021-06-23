@@ -23,33 +23,37 @@
             <div class="container-fluid">
                 <h1 class="logo">E-Library</h1>
         </nav>
-<!---------------------------------------------user registration box -------------------------------------------------------------------------------------------->      
+<!----------------------------------------------Red and Black Circles for decorative purpose---------------------------------------------------------------------------->
+        <div class="red-circle circle"> </div>
+        <div class="black-circle circle"> </div>
+
+<!---------------------------------------------Sign in box -------------------------------------------------------------------------------------------->      
         <div class="page-container">
-           
-            <img src="Images/user-signin-page-image2.png" alt="user-signup image" width="100%" height="100%">
-            <div class=" signin-signup-form-container user-signup-form-container">
-                <form action="" method="post" class="signin-signup-form user-signup-form">
-                    <h2 class="heading">User Registration</h2>
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" placeholder="Enter your Full Name">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Enter your Email">
-                    <label for="mobile">Mobile No.</label>
-                    <input type="text" id="mobile" placeholder="Enter your Mobile No">
-                    <label for="password"> Password</label>
-                    <input type="password" id="password" placeholder="Enter Your Password">
-                    <a class="btn btn-lg signup-form-btn" href="user-signin.html">Submit</a>
+            <img src="Images/starting-page-image.webp" alt="starting image" width="900" height="500">
+            <div class="index-main-block">
+                <h1>Embrace The Books!</h1>
+                <div class="quote-block">
+                    <p><em>Knowledge is free at library, Just bring your own container.</em></p>
+                </div>
+                <form action="user-signin.php" style="display:inline-block;">
+                <button class="btn btn-lg index-page-btn"> User Login</button>
                 </form>
-               
+               <form action="admin-signin.php " style="display:inline-block;">
+               <button class="btn btn-lg index-page-btn"> Admin Login</button>
+               </form>
+                
             </div>
-           
+        </div>
     </div>
 
-    </div>
+<!-------------------------------------------------About Us------------------------------------------------------------------------------>
+
+<!--------------------------------------------------Contact Us------------------------------------------------------------------------------------->
+
 <!-----------------------------------------------Footer---------------------------------------------------------------------------------------------------->
     
     <footer class="footer">
-        <span>Copyrights @ Team</span>
+        <span>Copyrights @Team</span>
     </footer>
 </body>
 
