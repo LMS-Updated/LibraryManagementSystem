@@ -33,7 +33,7 @@ session_start();
         <div class="page-container">
            
             <img src="Images/user-signin-page-image2.png" alt="user-signin image" width="100%" height="100%">
-            <form action="validation.php" method="post" class="signin-signup-form-container user-signin-form-container">
+            <form action="user_homepage.php" method="post" class="signin-signup-form-container user-signin-form-container">
                 <div class="signin-signup-form user-signin-form">
                     <h2 class="heading">Welcome Back User!</h2>
                     <label for="email">Email</label>

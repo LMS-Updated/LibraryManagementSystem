@@ -35,10 +35,10 @@
                 <div class="quote-block">
                     <p><em>Knowledge is free at library, Just bring your own container.</em></p>
                 </div>
-                <form action="user-signin.php" style="display:inline-block;">
+                <form action="user_signin.php" style="display:inline-block;">
                 <button class="btn btn-lg index-page-btn"> User Login</button>
                 </form>
-               <form action="admin-signin.php " style="display:inline-block;">
+               <form action="admin_signin.php " style="display:inline-block;">
                <button class="btn btn-lg index-page-btn"> Admin Login</button>
                </form>
                 
