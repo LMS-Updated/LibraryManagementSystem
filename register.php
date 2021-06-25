@@ -1,4 +1,4 @@
- <!---------------------database connection------------------------------------>
+
  <?php
 session_start();
 ////////////////////////////////////////////////////////////////////database connection////////////////////////////////////
@@ -44,7 +44,7 @@ if($fullname!=Null&& $email!=Null && $mobile !=Null && $password !=Null)
        
         $query = "INSERT INTO `users` ( `fullname`, `email`, `mobile`, `password`) VALUES ( '$fullname', '$email', '$mobile', '$password');";
         $query_run = mysqli_query($conn,$query);
-        header("Location:user-signin.php");
+        header("Location:user_signin.php");
     }
     
 }

@@ -1,5 +1,5 @@
 <?php
- session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -44,17 +44,10 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-auto">
           <li class="nav-item">
               <h5>
-                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-              </h5>
-          </li>
-          <li class="nav-item">
-              <h5>
-                <a class="nav-link" href="Books.html">Books Issued</a>
-              </h5>
-          </li>
-          <li class="nav-item">
-              <h5>
                 <a class="nav-link" href="about.html">Profile</a>
+                <a href="">View Profile</a>
+                <a href="">Edit Profile</a>
+                <a href="">Change Password</a>
               </h5>
           </li>
           <li class="nav-item">
@@ -100,7 +93,7 @@
 
 
 
-<h1>Welcome<?php $_SESSION['username'] ?></h1>
+<h1>Welcome <?php echo $_SESSION['username']; ?></h1>
   <!----------------------------------Footer------------------->
   <footer class="footer">
     <span>Copyrights @Team</span>

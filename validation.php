@@ -33,30 +33,23 @@ $password=$_POST['password'];
 
     $query = "select * from users where email = '$email' && password = '$password'";
     $result= mysqli_query($conn,$query);
-    $row = mysqli_fetch_assoc($result);
-      // echo $row['fullname'];
-      // $_SESSION['username'] == "hii";
-      // if(!isset($_SESSION['username'])){
-      //    echo "session variable problem firse";
-      
-      // }else{
-      //    echo $_SESSION['username'];
-       
-      // }
      
-
         while($row = mysqli_fetch_assoc($result)){
             if($row['email']==$email){
-                if($row['password']==$password){
-                  $_SESSION['username'] == $row['fullname'];
+               if($row['password']==$password) {
+                  $_SESSION['username'] = $row['fullname'];
+                  // echo $_SESSION['username'];
                     header("location:user_homepage.php");
+                  // echo $row['fullname'];
+                  // echo $row['password'];
+                  // echo $row['email'];
                 }else{
-                    header("Location:user-signin.php");
+                    header("Location:user_signin.php");
                     echo "please fill in the correct details";
                 }
                }
             }
       
-  
+            exit();
 
 ?>
