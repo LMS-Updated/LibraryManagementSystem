@@ -31,20 +31,39 @@ session_start();
 
   <title>E-Library</title>
   <style>
-    .container{
-width:100%;
-height:100vh;
-display:flex;
-justify-content:space-evenly;
-background-color:blue;
+.form-container{
+  width:450px;
+  height:500px;
+  margin:50px auto;
+  padding:50px;
+  background-color:rgba(250, 93, 93,0.5);
+  text-align:center;
+  border-radius:50px;
 }
- .container-left,.container-right{
-width:400px;
-height:500px;
-background-color:pink;
- }
+label{
+  display:block;
+  text-align:left;
+  margin-left:10px;
+}
+input{
+  width:300px;
+  background-color:white;
+}
+.item{
+  /* background-color:red; */
+  width:300px;
+  margin:20px auto;
+}
 
-
+.item a{
+  text-decoration:none;
+  margin:10px;
+  padding: 10px;
+  background-color:grey;
+  color:white;
+  border:none;
+  border-radius:10px;
+}
   </style>
 </head>
 
@@ -59,15 +78,11 @@ background-color:pink;
       </button>
       <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-auto">
-          <li class="nav-item">
-              <h5>
-              <a class="nav-link" href="user-profile.php">Profile</a>
-              </h5>
-          </li>
+
           
           <li class="nav-item">
               <h5>
-                <a class="nav-link" href="contact.html">Logout</a>
+                <a class="nav-link" href="logout.php">Logout</a>
               </h5>
           </li>
 
@@ -77,62 +92,41 @@ background-color:pink;
     </div>
   </nav>
 
-
-  <!-------------------------------------------------Student Homepage Front carousel---------------------------------------------------------------------->
-  <!-- <div id="home-carousel" class="carousel slide" data-ride="false">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="Images/user-homepage-image1.jpg" class="d-block w-100" height="600" alt="image">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="home-carousel-heading"><em>There is no friend as loyal as Books.</em></h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="Images/starting-page-image.webp" class="d-block w-100" height="600" alt="image">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="home-carousel-heading"><em>A room without boooks is like a body without a soul.</em></h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="Images/starting-page-image.webp" class="d-block w-100" height="600" alt="image">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="home-carousel-heading"><em>A book is a gift you can open again ad again.</em></h5>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#home-carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#home-carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  </div> -->
-
-
-
 <h1 style="text-align:center">Welcome <?php echo $_SESSION['username']; ?></h1>
 
-
-<div class="container">
-  <div class="container-left">
-a
+<!---------------------------------------------USer-profile-page------------------->
+<div class="form-container">
+    <form action="" method="post">
+    <div class="item">
+    <h2>Profile</h2>
+    </div>
+    <div class="item">
+    <label for="name">Name</label>
+        <input id="name" type="text" value=<?php echo $_SESSION['username'] ?> disabled>
+    </div>
+        <div class="item">
+        <label for="email">Email</label>
+        <input id="email" type="text" value=<?php echo $_SESSION['email'] ?> disabled>
+        </div>
+        
+        <div class="item">
+        <label for="mobile">Mobile</label>
+        <input id="mobile" type="text" value=<?php echo $_SESSION['mobile'] ?> disabled>
+        </div>
+        
+  <div class="item">
+  <a href="edit_user_profile.php">Edit Profile</a>
+   <a href="change_password.php">Change Password</a>
   </div>
-  <div class="container-right">
-b
-  </div>
-
+  
+    </form>
 </div>
   <!----------------------------------Footer------------------->
   <footer class="footer">
     <span>Copyrights @Team</span>
   </footer>
 
-<script>
-var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
-var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-  return new bootstrap.Dropdown(dropdownToggleEl)
-})
-</script>
+
 </body>
 
 </html>

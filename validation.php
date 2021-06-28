@@ -27,8 +27,8 @@ else{
 
 
 ///////////////////////////////////////////////////////////////////insert values////////////////////////////////////////////////////
-$email=$_POST['email'];
-$password=$_POST['password'];
+$email= $_POST['email'];
+$password= $_POST['password'];
 
 
     $query = "select * from users where email = '$email' && password = '$password'";
@@ -37,12 +37,11 @@ $password=$_POST['password'];
         while($row = mysqli_fetch_assoc($result)){
             if($row['email']==$email){
                if($row['password']==$password) {
-                  $_SESSION['username'] = $row['fullname'];
-                  // echo $_SESSION['username'];
-                    header("location:user_homepage.php");
-                  // echo $row['fullname'];
-                  // echo $row['password'];
-                  // echo $row['email'];
+                   $_SESSION['username'] = $row['fullname'];
+                   $_SESSION['email'] = $row['email'];
+                   $_SESSION['mobile'] = $row['mobile'];
+                   header("location:user_homepage.php");
+
                 }else{
                     header("Location:user_signin.php");
                     echo "please fill in the correct details";

@@ -46,7 +46,7 @@ session_start();
                     <img src="Images/user-signin-page-image1.png" id="user-sign-in-image1" alt="signin image" width="200" height="100">
                 </div>
             </form>  
-    </div>
+        </div>
 
     </div>
 <!-----------------------------------------------Footer---------------------------------------------------------------------------------------------------->
