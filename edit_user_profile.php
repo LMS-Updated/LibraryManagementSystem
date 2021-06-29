@@ -96,7 +96,7 @@ input{
 
 <!---------------------------------------------USer-profile-page------------------->
 <div class="form-container">
-    <form action="" method="post">
+    <form action="update_user_profile.php" method="post">
     <div class="item">
     <h2>Edit Profile</h2>
     </div>
@@ -131,55 +131,3 @@ input{
 
 </html>
 
-<?php
-
-////////////////////////////////////////////////////////////////////database connection////////////////////////////////////
-$server= "localhost";
-$username="root";
-$password="";
-$dbname= "lms";
-$conn = mysqli_connect($server,$username,$password);
-if(! $conn){
-   die("could not connect".mysqli_error());
-}
-   else{
-//        echo 'connected successfully';
-   }
-
-
-////////////////////////////////////////////////////////////////////database selection//////////////////////////////////////////////
-$db_select = mysqli_select_db($conn,$dbname);
-if(!$db_select)
-{
- die('Can\'t use ' . $dbname . ': ' . mysqli_error());
-}
-else{
-//  echo "HOLY EFF";
-}
-
-
-///////////////////////////////////////////////////////////////////insert values////////////////////////////////////////////////////
-$name=$_POST['name'];
-$email=$_POST['email'];
-$mobile=$_POST['mobile'];
-
-//    echo "$fullname";
-
-if($name!=Null&& $email!=Null && $mobile !=Null)
-{
-    $query = "UPDATE `users` SET `fullname`=`$name`, `email`=`$email`, `mobile`=`$mobile` WHERE `users`.`email`=`$email` ";
-    $result= mysqli_query($conn,$query);
-    // if($result){
-    //     header("location:user_profile.php");
-    // }
-    // else{
-    //     echo "data not updated";
-    // }
-   
-}
-else{
-    echo "please fill in the details.";
-}
-
-
-?>

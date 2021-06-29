@@ -33,7 +33,7 @@ session_start();
   <style>
 .form-container{
   width:450px;
-  height:400px;
+  height:500px;
   margin:50px auto;
   padding:50px;
   background-color:rgba(250, 93, 93,0.5);
@@ -42,6 +42,27 @@ session_start();
 }
 label{
   display:block;
+  text-align:left;
+  margin-left:10px;
+}
+input{
+  width:300px;
+  background-color:white;
+}
+.item{
+  /* background-color:red; */
+  width:300px;
+  margin:20px auto;
+}
+
+.item a{
+  text-decoration:none;
+  margin:10px;
+  padding: 10px;
+  background-color:grey;
+  color:white;
+  border:none;
+  border-radius:10px;
 }
   </style>
 </head>
@@ -61,7 +82,7 @@ label{
           
           <li class="nav-item">
               <h5>
-                <a class="nav-link" href="contact.html">Logout</a>
+                <a class="nav-link" href="logout.php">Logout</a>
               </h5>
           </li>
 
@@ -75,12 +96,25 @@ label{
 
 <!---------------------------------------------USer-profile-page------------------->
 <div class="form-container">
-    <form action="">
-        <label for="name">Current Password</label>
-        <input id="name" type="text"  >
-        <label for="email">New Password</label>
-        <input id="email" type="text"  >
-   <button type="submit" href="change_password.php">Change Password</button>
+    <form action="update_password.php" method="post">
+    <div class="item">
+    <h2>Change Password</h2>
+    </div>
+    <div class="item">
+    <label for="currPass">Current Password</label>
+        <input id="currPass" type="text" name="currPass" >
+    </div>
+        <div class="item">
+        <label for="newPass">New Password</label>
+        <input id="newPass" type="text" name="newPass"  >
+        </div>
+        
+        
+  <div class="item">
+  <button type="submit" >Update Password</button>
+  
+  </div>
+  
     </form>
 </div>
   <!----------------------------------Footer------------------->
@@ -92,3 +126,5 @@ label{
 </body>
 
 </html>
+
+

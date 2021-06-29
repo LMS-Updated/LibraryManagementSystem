@@ -67,7 +67,7 @@ background-color:pink;
           
           <li class="nav-item">
               <h5>
-                <a class="nav-link" href="contact.html">Logout</a>
+                <a class="nav-link" href="logout.php">Logout</a>
               </h5>
           </li>
 
