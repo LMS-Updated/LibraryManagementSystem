@@ -10,43 +10,51 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 <!------------------------------------------External Stylesheet-------------------------------------------------------------------------------->
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="..\public\css\style.css">
 <!------------------------------------------Font-awsome link for icons--------------------------------------------------------------------------->
     <script src="https://kit.fontawesome.com/60f0166554.js" crossorigin="anonymous"></script>
     <title>E-Library</title>
 </head>
 
 <body>
+    <div class="container">
 <!---------------------------------------------Navbar------------------------------------------------------------------------------------------------>
         <nav class="navbar fixed-top navbar-light bg-light">
             <div class="container-fluid">
                 <h1 class="logo">E-Library</h1>
         </nav>
-
-<!---------------------------------------------Sign in box -------------------------------------------------------------------------------------------->      
-        <div class="admin-signin-container">
+<!---------------------------------------------user registration box -------------------------------------------------------------------------------------------->      
+        <div class="page-container">
            
-            <img src="Images/admin-login-page.jpg" alt="admin-page-image" width="100%" height="100%">
-            <div class="signin-signup-form-container admin-signin-form-container">
-                <form action="admin-homepage.php" method="post" class="signin-signup-form">
-                    <h2 class="heading">Welcome Admin!</h2>
+            <img src="../Images/user-signin-page-image2.png" alt="user-signup image" width="100%" height="100%">
+            <div class=" signin-signup-form-container user-signup-form-container">
+                <form action="register.php" method="post" class="signin-signup-form user-signup-form">
+                    <h2 class="heading">User Registration</h2>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullname" placeholder="Enter your Full Name">
                     <label for="email">Email</label>
-                    <input id="email" type="text" placeholder="Enter your Email">
-                    <label for="password">Password</label>
-                    <input id="password" type="password" placeholder="Enter Your Password">
-                    <button class="btn btn-lg admin-login-btn" type="submit"> Login</button>
+                    <input type="text" id="email" name="email" placeholder="Enter your Email">
+                    <label for="mobile">Mobile No.</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Enter your Mobile No">
+                    <label for="password"> Password</label>
+                    <input type="password" id="password"  name="password" placeholder="Enter Your Password">
+                    <button class="btn btn-lg signup-form-btn" name="signup" type="submit">SignUp</a>
                 </form>
+               
             </div>
-
            
     </div>
 
- 
+    </div>
 <!-----------------------------------------------Footer---------------------------------------------------------------------------------------------------->
     
     <footer class="footer">
         <span>Copyrights @ Team</span>
     </footer>
+
+    
+
+   
 </body>
 
 </html>

@@ -25,7 +25,7 @@ session_start();
     crossorigin="anonymous"></script>
 
   <!------------------------------------------External Stylesheet-------------------------------------------------------------------------------->
-  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="../public/css/style.css">
   <!------------------------------------------Font-awsome link for icons--------------------------------------------------------------------------->
   <script src="https://kit.fontawesome.com/60f0166554.js" crossorigin="anonymous"></script>
 
@@ -96,7 +96,7 @@ input{
 
 <!---------------------------------------------USer-profile-page------------------->
 <div class="form-container">
-    <form action="update_user_profile.php" method="post">
+    <form action="update_profile.php" method="post">
     <div class="item">
     <h2>Edit Profile</h2>
     </div>
@@ -109,10 +109,6 @@ input{
         <input id="email" type="text" name="email" value=<?php echo $_SESSION['email'] ?> >
         </div>
         
-        <div class="item">
-        <label for="mobile">Mobile</label>
-        <input id="mobile" type="text" name="mobile" value=<?php echo $_SESSION['mobile'] ?> >
-        </div>
         
   <div class="item">
   <button type="submit" >Update Profile</button>

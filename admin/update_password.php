@@ -35,7 +35,15 @@ echo $currPass;
 echo $newPass;
 
 
-  $query = `select * from users where email='$email'`;
-  $result = mysqli_query($conn,$query);
+$query = "UPDATE `admin` SET `password`='$newPass' WHERE `email`='$email'";
+$result= mysqli_query($conn,$query);
+if($result){
+    header("location:admin_signin.php");
+}else{
+    // echo $name;
+    // echo $email;
+    // echo $mobile;
+    echo mysqli_error($conn);
+}
 
 ?>

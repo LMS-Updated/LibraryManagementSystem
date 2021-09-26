@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,12 +28,48 @@
   <link rel="stylesheet" href="public/css/style.css">
   <!------------------------------------------Font-awsome link for icons--------------------------------------------------------------------------->
   <script src="https://kit.fontawesome.com/60f0166554.js" crossorigin="anonymous"></script>
+
   <title>E-Library</title>
+  <style>
+.form-container{
+  width:450px;
+  height:500px;
+  margin:50px auto;
+  padding:50px;
+  background-color:rgba(250, 93, 93,0.5);
+  text-align:center;
+  border-radius:50px;
+}
+label{
+  display:block;
+  text-align:left;
+  margin-left:10px;
+}
+input{
+  width:300px;
+  background-color:white;
+}
+.item{
+  /* background-color:red; */
+  width:300px;
+  margin:20px auto;
+}
+
+.item a{
+  text-decoration:none;
+  margin:10px;
+  padding: 10px;
+  background-color:grey;
+  color:white;
+  border:none;
+  border-radius:10px;
+}
+  </style>
 </head>
 
 <body>
 
-
+<!---------------------------------Navbar---------------------------->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <h1 class="logo">E-Library</h1>
@@ -38,63 +78,50 @@
       </button>
       <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-auto">
+
+          
           <li class="nav-item">
               <h5>
-                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                <a class="nav-link" href="logout.php">Logout</a>
               </h5>
           </li>
-          <li class="nav-item">
-              <h5>
-                <a class="nav-link" href="Books.html">Books</a>
-              </h5>
-          </li>
-          <li class="nav-item">
-            <h5>
-              <a class="nav-link" href="Books.html">Users</a>
-            </h5>
-        </li>
-        <li class="nav-item">
-          <h5>
-            <a class="nav-link" href="Books.html">Issued</a>
-          </h5>
-      </li>
-          <li class="nav-item">
-              <h5>
-                <a class="nav-link" href="about.html">Profile</a>
-              </h5>
-          </li>
-          <li class="nav-item">
-              <h5>
-                <a class="nav-link" href="contact.html">Logout</a>
-              </h5>
-          </li>
+
+          
         </ul>
       </div>
     </div>
   </nav>
-     
 
-  <!-----------------------------------------------------------Statistics------------------------------------------------------------->
-  <div class="home-statistics">
-    <h1 class="home-statistics-main-heading">Our Statistics</h1>
-    <div class="home-statistics-item">
-      <h1 class="home-statistics-item-heading">Total Books</h1>
-      <h2>1000+</h2>
+<h1 style="text-align:center">Welcome <?php echo $_SESSION['username']; ?></h1>
+
+<!---------------------------------------------USer-profile-page------------------->
+<div class="form-container">
+    <form action="" method="post">
+    <div class="item">
+    <h2>Profile</h2>
     </div>
-    <div class="home-statistics-item">
-      <h1 class="home-statistics-item-heading">Total Users</h1>
-      <h2>500+</h2>
+    <div class="item">
+    <label for="name">Name</label>
+        <input id="name" type="text" value=<?php echo $_SESSION['username'] ?> disabled>
     </div>
-    <div class="home-statistics-item">
-      <h1 class="home-statistics-item-heading">Books Issued</h1>
-      <h2>1500+</h2>
-    </div>
+        <div class="item">
+        <label for="email">Email</label>
+        <input id="email" type="text" value=<?php echo $_SESSION['email'] ?> disabled>
+        </div>
+        
+  <div class="item">
+  <a href="edit_profile.php">Edit Profile</a>
+   <a href="change_password.php">Change Password</a>
   </div>
-
-
+  
+    </form>
+</div>
+  <!----------------------------------Footer------------------->
   <footer class="footer">
     <span>Copyrights @Team</span>
   </footer>
+
+
 </body>
 
 </html>
