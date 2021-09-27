@@ -91,22 +91,19 @@ $db_select = mysqli_select_db($conn,$dbname);
 <!-------------------------------registered user table------------------------------------------->
 <table class="table-bordered">
     <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>MObile No</th>
+    <th>Author id</th>
+    <th>Author</th>
 </tr>
 <?php
- $query = "select * from users";
+ $query = "select * from authors";
  $result= mysqli_query($conn,$query);
      while($row = mysqli_fetch_assoc($result)){
-                $name= $row['fullname'];
-                $email= $row['email'];
-                $mobile = $row['mobile'];
+                $author_id= $row['id'];
+                $author= $row['name'];
                 ?>
 <tr>
-    <td><?php echo $name; ?></td>
-    <td><?php echo $email; ?></td>
-    <td><?php echo $mobile; ?></td>
+    <td><?php echo $author_id; ?></td>
+    <td><?php echo $author; ?></td>
 </tr>
 <?php
      }

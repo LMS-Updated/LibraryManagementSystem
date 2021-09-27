@@ -91,22 +91,29 @@ $db_select = mysqli_select_db($conn,$dbname);
 <!-------------------------------registered user table------------------------------------------->
 <table class="table-bordered">
     <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>MObile No</th>
+    <th>Book no</th>
+    <th>Book name</th>
+    <th>Book author</th>
+    <th>Student</th>
+    <th>issue Date</th>
 </tr>
 <?php
- $query = "select * from users";
+ $query = "select issuedbooks.book_name, issuedbooks.book_no,issuedbooks.book_author,
+ issuedbooks.issue_date,users.fullname from issuedbooks left join users on issuedbooks.student_id = users.uid";
  $result= mysqli_query($conn,$query);
      while($row = mysqli_fetch_assoc($result)){
-                $name= $row['fullname'];
-                $email= $row['email'];
-                $mobile = $row['mobile'];
+                $book_no = $row['book_no'];
+                $book_name = $row['book_name'];
+                $book_author = $row['book_author'];
+                $student = $row['fullname'];
+                $issue_date = $row['issue_date'];
                 ?>
 <tr>
-    <td><?php echo $name; ?></td>
-    <td><?php echo $email; ?></td>
-    <td><?php echo $mobile; ?></td>
+    <td><?php echo $book_no; ?></td>
+    <td><?php echo $book_name; ?></td>
+    <td><?php echo $book_author; ?></td>
+    <td><?php echo $student; ?></td>
+    <td><?php echo $issue_date; ?></td>
 </tr>
 <?php
      }

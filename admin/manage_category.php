@@ -1,11 +1,6 @@
 <?php
-$server= "localhost";
-$username="root";
-$password="";
-$dbname= "lms";
-$conn = mysqli_connect($server,$username,$password);
-$db_select = mysqli_select_db($conn,$dbname);
-
+require('functions.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +32,8 @@ $db_select = mysqli_select_db($conn,$dbname);
 </head>
 
 <body>
+
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <h1 class="logo">E-Library</h1>
@@ -63,8 +60,8 @@ $db_select = mysqli_select_db($conn,$dbname);
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" data-toggle="dropdown">Book</a>
   <div class="dropdown-menu">
-    <a href="" class="dropdown-item">Add New Book</a>
-    <a href="" class="dropdown-item">Manage Books</a>
+    <a href="add_book.php" class="dropdown-item">Add New Book</a>
+    <a href="manage_book.php" class="dropdown-item">Manage Books</a>
 </div>
 </li>
 <li class="nav-item dropdown">
@@ -87,33 +84,8 @@ $db_select = mysqli_select_db($conn,$dbname);
 </ul>
 </div>
 </nav>
-<br> 
-<!-------------------------------registered user table------------------------------------------->
-<table class="table-bordered">
-    <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>MObile No</th>
-</tr>
-<?php
- $query = "select * from users";
- $result= mysqli_query($conn,$query);
-     while($row = mysqli_fetch_assoc($result)){
-                $name= $row['fullname'];
-                $email= $row['email'];
-                $mobile = $row['mobile'];
-                ?>
-<tr>
-    <td><?php echo $name; ?></td>
-    <td><?php echo $email; ?></td>
-    <td><?php echo $mobile; ?></td>
-</tr>
-<?php
-     }
-?>
-</table>
+    <br> 
 
-  
   <footer class="footer">
     <span>Copyrights @Team</span>
   </footer>

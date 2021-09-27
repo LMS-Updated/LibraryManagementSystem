@@ -1,12 +1,4 @@
-<?php
-$server= "localhost";
-$username="root";
-$password="";
-$dbname= "lms";
-$conn = mysqli_connect($server,$username,$password);
-$db_select = mysqli_select_db($conn,$dbname);
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,6 +29,8 @@ $db_select = mysqli_select_db($conn,$dbname);
 </head>
 
 <body>
+
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <h1 class="logo">E-Library</h1>
@@ -63,57 +57,62 @@ $db_select = mysqli_select_db($conn,$dbname);
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" data-toggle="dropdown">Book</a>
   <div class="dropdown-menu">
-    <a href="" class="dropdown-item">Add New Book</a>
-    <a href="" class="dropdown-item">Manage Books</a>
+    <a href="add_book.php" class="dropdown-item">Add New Book</a>
+    <a href="manage_book.php" class="dropdown-item">Manage Books</a>
 </div>
 </li>
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
   <div class="dropdown-menu">
-    <a href="" class="dropdown-item">Add New Category</a>
-    <a href="" class="dropdown-item">Manage Categories</a>
+    <a href="add_category.php" class="dropdown-item">Add New Category</a>
+    <a href="manage_category.php" class="dropdown-item">Manage Categories</a>
 </div>
 </li>
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" data-toggle="dropdown">Author</a>
   <div class="dropdown-menu">
-    <a href="" class="dropdown-item">Add New Author</a>
-    <a href="" class="dropdown-item">Manage Authors</a>
+    <a href="add_author.php" class="dropdown-item">Add New Author</a>
+    <a href="manage_author.php" class="dropdown-item">Manage Authors</a>
 </div>
 </li>
 <li class="nav-item">
-  <a href="" class="nav-link">Issue Book</a>
+  <a href="issue_book.php" class="nav-link">Issue Book</a>
 </li>
 </ul>
 </div>
 </nav>
-<br> 
-<!-------------------------------registered user table------------------------------------------->
-<table class="table-bordered">
-    <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>MObile No</th>
-</tr>
-<?php
- $query = "select * from users";
- $result= mysqli_query($conn,$query);
-     while($row = mysqli_fetch_assoc($result)){
-                $name= $row['fullname'];
-                $email= $row['email'];
-                $mobile = $row['mobile'];
-                ?>
-<tr>
-    <td><?php echo $name; ?></td>
-    <td><?php echo $email; ?></td>
-    <td><?php echo $mobile; ?></td>
-</tr>
-<?php
-     }
-?>
-</table>
+    <br> 
+<!------------------------------------add book----------------------------------------------------------------------------->
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form action="addBookBackend.php" method="post">
+          <div class="form-group">
+              <label>Book Name</label>
+              <input type="text" name="book_name" class="form-control" required="">
+          </div>   
+          <div class="form-group">
+              <label>Author id</label>
+              <input type="text" name="author_id" class="form-control" required="">
+          </div>  
+          <div class="form-group">
+              <label>Category</label>
+              <input type="text" name="book_category" class="form-control" required="">
+          </div>  
+          <div class="form-group">
+              <label>Book No</label>
+              <input type="text" name="book_no" class="form-control" required="">
+          </div>  
+          <div class="form-group">
+              <label>Book Price</label>
+              <input type="text" name="book_price" class="form-control" required="">
+          </div>  
+        <button type="submit" class="btn btn-primary" name="add_book">Add Book</button>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
 
-  
   <footer class="footer">
     <span>Copyrights @Team</span>
   </footer>

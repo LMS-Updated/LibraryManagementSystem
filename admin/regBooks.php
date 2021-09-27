@@ -91,22 +91,27 @@ $db_select = mysqli_select_db($conn,$dbname);
 <!-------------------------------registered user table------------------------------------------->
 <table class="table-bordered">
     <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>MObile No</th>
+    <th>Book No.</th>
+    <th>Book Name</th>
+    <th>Author</th>
+    <th>Price</th>
+    <th>Category</th>
 </tr>
 <?php
- $query = "select * from users";
+ $query = "select books.book_name, books.book_no,books.price,authors.name from books left join authors on books.author_id = authors.id";
  $result= mysqli_query($conn,$query);
      while($row = mysqli_fetch_assoc($result)){
-                $name= $row['fullname'];
-                $email= $row['email'];
-                $mobile = $row['mobile'];
+                $book_name= $row['book_name'];
+                $author= $row['name'];
+                $book_no = $row['book_no'];
+                $price = $row['price'];
                 ?>
 <tr>
-    <td><?php echo $name; ?></td>
-    <td><?php echo $email; ?></td>
-    <td><?php echo $mobile; ?></td>
+    <td><?php echo $book_no; ?></td>
+    <td><?php echo $book_name; ?></td>
+    <td><?php echo $author; ?></td>
+    <td>Rs<?php echo $price; ?></td>
+    <td>waiting</td>
 </tr>
 <?php
      }
