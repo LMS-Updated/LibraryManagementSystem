@@ -30,7 +30,7 @@ $name=$_POST['name'];
 $email=$_POST['email'];
 
 
-    $query = "UPDATE `admin` SET `fullname`='$name', `email`='$email' WHERE `email`='$email'";
+    $query = "UPDATE `admin` SET `name`='$name', `email`='$email' WHERE `email`='$email'";
     $result= mysqli_query($conn,$query);
     if($result){
         header("location:admin_signin.php");
