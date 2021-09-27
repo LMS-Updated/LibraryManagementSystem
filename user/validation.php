@@ -40,6 +40,8 @@ $password= $_POST['password'];
                    $_SESSION['username'] = $row['fullname'];
                    $_SESSION['email'] = $row['email'];
                    $_SESSION['mobile'] = $row['mobile'];
+                   $_SESSION['roll_no']= $row['roll_no'];
+                   $_SESSION['address']=$row['address'];
                    header("location:user_homepage.php");
 
                 }else{

@@ -13,14 +13,6 @@
     margin:auto;
 }
 
-.footer{
-    width:100%;
-    height:10vh;
-    padding-top:30px;
-    margin-bottom:0px;
-    text-align:center;
-    background-color:lightgrey;
-}
 
 .page-container{
     width:80vw;
@@ -108,14 +100,6 @@ font-size:20px;
     height:50vh;
 }
 
-#user-sign-in-image1{
-    position:absolute;
-    left:45%;
-    top:55%;
-    height:20vh;
-    width:20vw;
-}
-
 .user-signin-span{
     font-size:15px;
     text-align:center;
@@ -123,11 +107,22 @@ font-size:20px;
 
 /************************************************user-Signup Page****************************************************************/
 .user-signup-form-container{
-    background-color:rgba(250, 93, 93,0.8);
+    background-color:rgba(46, 41, 41, 0.4);
+    width:70vw;
+    height:100vh;
+    margin:auto;
+    padding-top:15px;
+    margin-top:20px;
+  position:relative;
 }
 
 .user-signup-form{
-    height:60vh;
+    width:60vw;
+    background-color:rgb(231, 205, 200); 
+    padding:2%;
+    margin:8%;
+    display:flex;
+    flex-direction:column; 
 }
 
 /***************************************************admin-sign-in page**********************************************************/
@@ -179,5 +174,3 @@ box-shadow:2px 2px 2px grey;
 .home-statistics-item-heading{
 padding:0% 0% 2% 0%;
 }
-
-

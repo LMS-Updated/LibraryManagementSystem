@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,17 +10,14 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 <!------------------------------------------External Stylesheet-------------------------------------------------------------------------------->
-    <link rel="stylesheet" href="../public/css/main.css">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/style.css">
 <!------------------------------------------Font-awsome link for icons--------------------------------------------------------------------------->
     <script src="https://kit.fontawesome.com/60f0166554.js" crossorigin="anonymous"></script>
-  
-</head>
-<title>LearnZilla</title>
+    <title>LearnZilla</title>
 </head>
 
 <body>
-
 <!--------------------------------------------------Navbar------------------------------------------------------------------------>
 <div>
         <nav class="navbar navbar-expand-lg fixed-top navbar-light ">
@@ -35,46 +31,46 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.php">HOME</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.php">ABOUT US</a>
+                            <a class="nav-link" href="index.php">ABOUT US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.php">SERVICES</a>
+                            <a class="nav-link" href="index.php">SERVICES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.php">TEAM</a>
+                            <a class="nav-link" href="index.php">TEAM</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-</div>
+    </div>
+<!----------------------------------------------Red and Black Circles for decorative purpose---------------------------------------------------------------------------->
+        <div class="red-circle circle"> </div>
+        <div class="black-circle circle"> </div>
 
 <!---------------------------------------------Sign in box -------------------------------------------------------------------------------------------->      
-        <div class="admin-signin-container">
-           
-            <img src="../Images/admin-login-page.jpg" alt="admin-page-image" width="100%" height="100%">
-            <div class="signin-signup-form-container admin-signin-form-container">
-                <form action="validation.php" method="post" class="signin-signup-form">
-                    <h2 >Welcome Admin!</h2>
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="text" placeholder="Enter your Email">
-                    <label for="password">Password</label>
-                    <input id="password" name="password" type="password" placeholder="Enter Your Password">
-                    <button class="btn btn-lg admin-login-btn" type="submit"> Login</button>
+        <div class="page-container">
+            <img src="Images/starting-page-image.webp" alt="starting image" width="900" height="500">
+            <div class="index-main-block">
+                <h1>Embrace The Books!</h1>
+                <div class="quote-block">
+                    <p><em>Knowledge is free at library, Just bring your own container.</em></p>
+                </div>
+                <form action="user/user_signin.php" style="display:inline-block;">
+                <button class="btn btn-lg index-page-btn"> User Login</button>
                 </form>
+               <form action="admin/admin_signin.php " style="display:inline-block;">
+               <button class="btn btn-lg index-page-btn"> Admin Login</button>
+               </form>
+                
             </div>
-
-           
+        </div>
     </div>
 
-   
-
-
- 
-<!---------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------->
+ <!---------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------->
 <div class="footer" style="border-top:2px solid black;margin-top:80px;" >
         <div class="container">
             <div class="row justiy-content-center">
@@ -102,9 +98,7 @@
             </div>
         </div>
     </div>
-
-
-
+    <script src="index.js"></script>
 </body>
 
 </html>

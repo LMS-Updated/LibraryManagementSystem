@@ -31,9 +31,11 @@ $fullname=$_POST['fullname'];
 $email=$_POST['email'];
 $mobile=$_POST['mobile'];
 $password=$_POST['password'];
+$roll_no=$_POST['roll_no'];
+$address=$_POST['address'];
 //    echo "$fullname";
 
-if($fullname!=Null&& $email!=Null && $mobile !=Null && $password !=Null)
+if($fullname!=Null&& $email!=Null && $mobile !=Null && $password !=Null )
 {
     $query = "select * from users where email = '$email' && password = '$password'";
     $result= mysqli_query($conn,$query);
@@ -42,7 +44,7 @@ if($fullname!=Null&& $email!=Null && $mobile !=Null && $password !=Null)
         echo"duplicate data";
     }else{
        
-        $query = "INSERT INTO `users` ( `fullname`, `email`, `mobile`, `password`) VALUES ( '$fullname', '$email', '$mobile', '$password');";
+        $query = "INSERT INTO `users` (`uid`, `fullname`, `email`, `mobile`, `password`, `roll_no`, `address`) VALUES ('', '$fullname', '$email', '$mobile', '$password', '$roll_no', '$address')";
         $query_run = mysqli_query($conn,$query);
         header("Location:user_signin.php");
     }

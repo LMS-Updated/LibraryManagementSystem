@@ -45,10 +45,10 @@
                             <a class="nav-link active" aria-current="page" href="#home">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects">ABOUT US</a>
+                            <a class="nav-link" href="#about">ABOUT US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#pricing">SERVICES</a>
+                            <a class="nav-link" href="#services">SERVICES</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#team">TEAM</a>
@@ -59,27 +59,124 @@
         </nav>
     </div>
     <!------------------------------------------------HOme----------------------------------------------------------------------------->
-    <div class="home">
+    <div class="home" id="home">
     <img src="Images/homePageImage.svg" alt="main" width="700" height="900">
      <div class="homePageForm">
          <div class="homepage_quote">
-        
+       
          </div>
          <br>
          <div class="button_div">
          <button class="box">
-             <a>
+             <a href="main.php">
                  Get access to offline Library
              </a>
          </button>
          <button class="box">
-             <a>
+             <a href="">
                  Read articles
             </a>
         </button>
        </div>
      </div>
 </div>
+
+
+<!-------about-------->
+<div class="about" id="about">
+    <img src="Images/services.svg" alt="main" width="600" height="600" style="float:right; margin-right:150px;">
+    <div class="aboutContent">
+<h1 class="aboutheading">About</h1>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor aut, temporibus esse delectus distinctio facilis cupiditate quidem voluptatum soluta rerum. Dolor aut, temporibus esse delectus distinctio facilis cupiditate quidem voluptatum soluta rerum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nisi id dolores incidunt asperiores blanditiis deleniti rerum recusandae, necessitatibus quae obcaecati impedit voluptate neque ipsum ratione officiis. Voluptates, quod. Nihil.</p>
+</div>
+</div>
+<!-----Services------->
+<div class="services" id="services">
+
+<h1 class="servicesheading">Services</h1>
+<div class="row" >
+<div class="col-sm-12 col-md-4">
+<img src="Images/books.svg" alt="main" width="200" height="200" >
+<h4>Access to books</h4>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor aut, temporibus esse delectus distinctio facilis cupiditate quidem voluptatum soluta rerum. Dolor aut, temporibus esse delectus distinctio facilis cupiditate quidem voluptatum soluta rerum</p>
+</div>
+<div class="col-sm-12 col-md-4">
+<img src="Images/responsive.svg" alt="main" width="200" height="200" >
+<h4>Responsive to all devices</h4>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor aut, temporibus esse delectus distinctio facilis cupiditate quidem voluptatum soluta rerum. Dolor aut, temporibus esse delectus distinctio facilis cupiditate quidem voluptatum soluta rerum</p>
+</div>
+<div class="col-sm-12 col-md-4">
+<img src="Images/news.svg" alt="main" width="200" height="200" >
+<h4>Can read news</h4>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor aut, temporibus esse delectus distinctio facilis cupiditate quidem voluptatum soluta rerum. Dolor aut, temporibus esse delectus distinctio facilis cupiditate quidem voluptatum soluta rerum</p>
+</div>
+</div>
+</div>
+<!-----------------------------------------------------TEAM SECTION------------------------------------------------------------------------->
+<div class="team" id="team">
+            <h1 class="heading"> Meet The Team <img src="Images/team.svg" height="100px" width="100px"> </h1>
+            <div class="row team-content justify-content-center">
+                <div class="col-sm-12 col-md-4 team-member">
+                    <img src="Images/jugesh.jpg" alt="">
+                    <div class="team-member-icons">
+                        <i class="fab fa-facebook-f icon"></i>
+                        <i class="fab fa-github icon"></i>
+                        <i class="fab fa-instagram icon"></i>
+                    </div>
+                    <p class="name">JUGESH RAGHAV</p>
+                    <P class="responsibility">Lead Developer</P>
+                </div>
+                <div class="col-sm-12 col-md-4 team-member">
+                    <img src="Images/lucky.jpeg" alt="">
+                    <div class="team-member-icons">
+                        <i class="fab fa-facebook-f icon"></i>
+                        <i class="fab fa-github icon"></i>
+                        <i class="fab fa-instagram icon"></i>
+                    </div>
+                    <p class="name">LUCKY KASHYAP</p>
+                    <P  class="responsibility">Lead Developer</P>
+                </div>
+                <div class="col-sm-12 col-md-4 team-member">
+                    <img src="Images/rakesh.jpg" alt="">
+                    <div class="team-member-icons">
+                        <i class="fab fa-facebook-f icon"></i>
+                        <i class="fab fa-github icon"></i>
+                        <i class="fab fa-instagram icon"></i>
+                    </div>
+                    <p class="name">RAKESH SARKAR</p>
+                    <P class="responsibility">Lead Developer</P>
+                </div>
+            </div>
+    </div>
+
+<!---------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------->
+<div class="footer" >
+        <div class="container">
+            <div class="row justiy-content-center">
+                <!-----------------------column 1-------------------->
+                <div class=" col-sm-2 col-md-4">
+                    <p class="footer-heading" >LearnZILLA</p>
+                    <span class="footer-content">Place where you can learn and grow. </span>
+                </div>
+                <!----------------------column 2 --------------------->
+                <div class=" col-sm-12 col-md-4">
+                    <p class="footer-heading" >FOLLOW US</p>
+                    <i class="fab fa-facebook-f icon"></i>
+                    <i class="fab fa-github icon"></i>
+                    <i class="fab fa-instagram icon"></i>
+                    <i class="fab fa-linkedin icon"></i>
+
+                </div>
+                <!-----------------colum 3---------------------->
+                <div class=" col-sm-12 col-md-4">
+                    <p class="footer-heading" >CONTACT US</p>
+                    <p class="footer-contact">+123&nbsp; 456 &nbsp;789</p>
+                    <p class="footer-contact">LearnZilla@gmail.com</p>
+                    <p class="footer-contact">enquiry@learnZilla.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
